@@ -4,6 +4,11 @@
 
 We hope things. For you.
 
+<ul>
+  {{#each model as |rental-from-template|}}
+    {{ rental-tile rental-in-component=rental-from-template }}
+  {{/each}}
+</ul>
+
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click to contact.{{/link-to}}
-{{#link-to 'index'}}Click to head all the way home.{{/link-to}}
