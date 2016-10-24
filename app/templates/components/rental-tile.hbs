@@ -9,4 +9,6 @@
   {{else}}
     <button {{action 'imageToggle'}}>Toggle</button>
   {{/if}}
+  {{update-rental rental=rental-in-component update="update"}}
+  <button {{action 'delete' rental-in-component}}>Delete this rental</button>
 </li>

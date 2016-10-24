@@ -6,9 +6,11 @@ We hope things. For you.
 
 <ul>
   {{#each model as |rental-from-template|}}
-    {{ rental-tile rental-in-component=rental-from-template }}
+    {{ rental-tile rental-in-component=rental-from-template destroyRental="destroyRental"}}
   {{/each}}
 </ul>
+
+{{new-rental saveRental2="saveRental3"}}
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click to contact.{{/link-to}}
