@@ -16,5 +16,14 @@
     "type": "Corrugated Shack",
     "bedrooms": 3,
     "image":"https://i.ytimg.com/vi/r1TpeMt8aF4/hqdefault.jpg"
-  }]
+  }],
+  "reviews": [{
+   "author": "Andrea",
+   "rating": 4,
+   "content": "Did not fall down."
+ }, {
+   "author": "Alex",
+   "rating": 9,
+   "content": "Nice view of the volcano!"
+ }]
 }
