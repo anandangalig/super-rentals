@@ -7,9 +7,6 @@ export default Ember.Component.extend({
       this.set('updateRentalForm', true);
     },
     update(rental) {
-
-      //TODO: Close all other update forms
-
       var params = {
         owner: this.get('owner'),
         city: this.get('city'),
@@ -25,7 +22,7 @@ export default Ember.Component.extend({
         self.set(key, "");
       });
       this.sendAction('update', rental, params);
-      //SEND TO rental-tile.js
+      //SEND TO rental.js
     }
   }
 });

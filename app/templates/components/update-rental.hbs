@@ -1,6 +1,7 @@
 {{yield}}
 
 {{#if updateRentalForm}}
+
   <h4>Update {{rental.owner}}'s {{rental.type}}</h4>
   <div>
     <form>
@@ -32,6 +33,7 @@
       <button {{action 'update' rental}}>Save</button>
     </form>
   </div>
+
 {{else}}
-    <button {{action 'updateRentalForm'}}>Update</button>
+      <button {{action 'updateRentalForm'}}>Update</button>
 {{/if}}

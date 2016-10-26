@@ -1,7 +1,7 @@
 {{yield}}
 
 <li>
-  {{rental-in-component.owner}}'s {{rental-in-component.type}} in {{rental-in-component.city}}
+  {{#link-to 'rental' rental-in-component.id}} {{rental-in-component.owner}}'s {{rental-in-component.type}} in {{rental-in-component.city}} {{/link-to}}
   {{#if isImageShowing}}
     <p>
       <img src={{rental-in-component.image}} alt={{rental-in-component.type}} {{action 'imageToggle'}}>
@@ -9,6 +9,4 @@
   {{else}}
     <button {{action 'imageToggle'}}>Toggle</button>
   {{/if}}
-  {{update-rental rental=rental-in-component update="update"}} <!-- note: params and rental are passed in from update-rental to .js-->
-  <button {{action 'delete' rental-in-component}}>Delete this rental</button>
 </li>
