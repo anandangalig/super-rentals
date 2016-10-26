@@ -14,6 +14,7 @@ export default Ember.Component.extend({
       },
       update(rental, params) {
         this.sendAction('update', rental, params);
+        //send to index.js
       }
   }
 

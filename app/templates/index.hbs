@@ -6,7 +6,7 @@ We hope things. For you.
 
 <ul>
   {{#each model as |rental-from-template|}}
-    {{ rental-tile rental-in-component=rental-from-template destroyRental="destroyRental"}}
+    {{ rental-tile update="update" rental-in-component=rental-from-template destroyRental="destroyRental"}}
   {{/each}}
 </ul>
 

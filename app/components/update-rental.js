@@ -7,6 +7,9 @@ export default Ember.Component.extend({
       this.set('updateRentalForm', true);
     },
     update(rental) {
+
+      //TODO: Close all other update forms
+
       var params = {
         owner: this.get('owner'),
         city: this.get('city'),
@@ -15,6 +18,12 @@ export default Ember.Component.extend({
         bedrooms: this.get('bedrooms')
       };
       this.set('updateRentalForm', false);
+
+      //Clear the inputted values after they have been used
+      var self = this; //fixing the scope issue by creating this var outside of the forEach loop.
+      Object.keys(params).forEach(function(key) {
+        self.set(key, "");
+      });
       this.sendAction('update', rental, params);
       //SEND TO rental-tile.js
     }
