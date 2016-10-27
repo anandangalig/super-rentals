@@ -1,7 +1,9 @@
+<!--This is a separate route created later that specializes in Rental details, update and creating new ones.-->
+
 <h2>More information about {{model.owner}}'s {{model.type}}</h2>
 
-{{update-rental rental=model update="update"}}
+{{update-rental rental=model update="update"}}<hr> <!--This child component knows exactly which rental to work on because of the #linkto to get here that passes the rental id (for loop involved as well).-->
 
-{{rental-detail rental=model destroyRental="destroyRental"}}
+{{rental-detail rental=model destroyRental="destroyRental"}}<hr> <!-- NOTE: functions are in "", and objects are not????? -->
 
-{{new-review saveReview="saveReview" rental=model}}
+{{new-review rental=model saveReview="saveReview"}}

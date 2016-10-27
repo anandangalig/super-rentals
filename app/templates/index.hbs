@@ -1,14 +1,12 @@
 <h1> Welcome </h1>
 
-We hope things. For you.
-
 <ul>
   {{#each model.rentals as |rental|}}
-    {{rental-tile update="update" rental-in-component=rental destroyRental="destroyRental"}}
+    {{rental-tile rental-in-component=rental}}
   {{/each}}
 </ul>
 
-{{new-rental saveRental2="saveRental3"}}
+{{new-rental saveRental2="saveRental3"}} <!--saveRental2 action is being received from child component new-rental.js-->
 
 
 <h2>All Reviews</h2>
@@ -22,4 +20,4 @@ We hope things. For you.
 <hr>
 
 {{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Click to contact{{/link-to}}
+{{#link-to 'contact'}}Contact Us{{/link-to}}
