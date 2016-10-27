@@ -23,7 +23,7 @@ export default Ember.Route.extend({
     update(rental, params) { //received the action trigger + the current rental and it's new params from child component update-rental
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) { //loops thru the keys of the passed in params, checks if it is not undefined(i.e. had new input to update)
-          rental.set(key,params[key]); //NOTE: what's in the params[key]? the Value?
+          rental.set(key,params[key]); //NOTE: what's in the params[key]= the Value
         }
       });
       rental.save();
