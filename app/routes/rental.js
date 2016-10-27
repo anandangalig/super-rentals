@@ -5,8 +5,18 @@ export default Ember.Route.extend({
     return this.store.findRecord('rental', params.rental_id); //talking to Firabase to find the specific 'rental' given the params.rental_id, then passing it to  child components.
   },
   actions: {
-    destroyRental(rental) {
-      rental.destroyRecord();
+    destroyRental(rental) { //action from child rental-detail with the specific rental
+      var review_deletions = rental.get('reviews').map(function(review) {
+        return review.destroyRecord(); //pulling all reviews of given rental and deleting = var
+      });
+      Ember.RSVP.all(review_deletions).then(function() { //Ember.RSVP.all() can package many promises and wait for them.
+        return rental.destroyRecord(); //promised callback function that deletes from Firebase
+      })
+      this.transitionTo('index');
+    },
+
+    destroyReview(review) { //3rd and final stop of this action. This should take care of deleting the review both in your application, and Firebase data store.
+      review.destroyRecord();
       this.transitionTo('index');
     },
 

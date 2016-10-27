@@ -1,2 +1,5 @@
 {{yield}}
+<!--This component would be the grandchild of 'rental' route and child of rental-details component.-->
 <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+
+<button {{action 'delete' review}}>Delete this Review</button>
