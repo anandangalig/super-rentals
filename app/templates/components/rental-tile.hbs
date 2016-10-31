@@ -1,7 +1,7 @@
 {{yield}}
 
 <li>
-  {{#link-to 'rental' rental-in-component.id}} {{rental-in-component.owner}}'s {{rental-in-component.type}} in {{rental-in-component.city}} {{/link-to}} <!-- links to 'rental' route with the specific ID -->
+  {{#link-to 'rental' rental-in-component.id}} {{rental-in-component.owner}}'s {{rental-in-component.type}} in {{rental-in-component.city}} for ${{rental-in-component.cost}}.00 {{/link-to}} <!-- links to 'rental' route with the specific ID -->
   {{#if isImageShowing}}
     <p>
       <img src={{rental-in-component.image}} alt={{rental-in-component.type}} {{action 'imageToggle'}}>

@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       });
       Ember.RSVP.all(review_deletions).then(function() { //Ember.RSVP.all() can package many promises and wait for them.
         return rental.destroyRecord(); //promised callback function that deletes from Firebase
-      })
+      });
       this.transitionTo('index');
     },
 
