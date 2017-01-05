@@ -1,11 +1,11 @@
-  # _Property Rental App with Ember JS_
+  #_Property Rental App with Ember JS_
 
   ####_A basic app practicing Ember JS. 10/27/2016_
 
-  #### By _**Anand Angalig, Alex Leibler, and Kyle Fisher**_
+  ####_By **Anand Angalig, Alex Leibler, and Kyle Fisher**_
 
 
-  ## Description
+  ##Description
 
   _This web application is capable to creating, displaying, and editing meals. Also, users can show meals based on high.low calories levels._
 
